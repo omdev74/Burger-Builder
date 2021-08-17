@@ -2,7 +2,7 @@ import React,{Component} from "react"
 import classes from "./BurgerIngredient.module.css"
 
 import PropTypes from "prop-types"
-import BurgerBuilder from "../../../containers/BurgerBuilder/BurgerBuilder";
+
 class BurgerIngredient extends Component{
     render(){
         let ingredient = null;
@@ -22,7 +22,7 @@ class BurgerIngredient extends Component{
             ingredient=<div className ={classes.Meat}></div>;
             break;
         case("salad"):
-            ingredient=<div className ={classes.Meat}></div>;
+            ingredient=<div className ={classes.Salad}></div>;
             break;
         case("cheese"):
             ingredient=<div className ={classes.Cheese}></div>;
