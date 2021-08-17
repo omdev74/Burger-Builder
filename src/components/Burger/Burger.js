@@ -25,7 +25,7 @@ const burger =(props)=>{
     console.log(transfromedIngredients);
 
     if(transfromedIngredients.length === 0){
-        transfromedIngredients= <p>Please start adding ingredients</p>
+        transfromedIngredients= <p>Please start adding ingredients.....</p>
     }
 
     

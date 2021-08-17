@@ -3,7 +3,7 @@
     width: 80%;
     background: linear-gradient(#f07c0f, #d66f10);
     border-radius: 0 0 30px 30px;
-    box-shadow: inset -15px 0 #c15711;
+    box-shadow: inset -15px 0 #ad4f10;
     margin: 2% auto;
 }
 
@@ -12,7 +12,7 @@
     width: 80%;
     background: linear-gradient(#f07c0f, #d66f10);
     border-radius: 50% 50% 0 0;
-    box-shadow: inset -15px 0 #c15711;
+    box-shadow: inset -15px 0 #ad4f10;
     margin: 2% auto;
     position: relative;
 }
