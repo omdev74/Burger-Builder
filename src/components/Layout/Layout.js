@@ -5,10 +5,13 @@ import classes from "./Layout.module.css"
 import Aux from "../../hoc/Auxiliary";
 const layout =(props)=>(
     <Aux>
-    <div>Toolbar,SideDrawer,Backdrop</div>
-    <main className={classes.Content}>
+        <div className={classes.Bg}>
+        <div>Toolbar,SideDrawer,Backdrop</div>
+        <main className={classes.Content}>
         {props.children}
-    </main>
+        </main>
+        </div>
+    
 
     </Aux>
 );
