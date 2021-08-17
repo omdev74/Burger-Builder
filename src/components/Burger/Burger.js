@@ -4,14 +4,13 @@ import BurgerIngredient from "./BurgerIngredient/BurgerIngredient";
 const burger =(props)=>{
     //Conversion logic-------------------------------------
     //igkey(name of ingredient)
-    const transfromedIngredients=Object.keys(props.ingredients).map(igkey=>{
+    let transfromedIngredients=Object.keys(props.ingredients).map(igkey=>{
         // console.log(props.ingredients);
         // console.log(props.ingredients[igkey]);
         return [...Array(props.ingredients[igkey])]//[,]
         .map((_,i)=>{
             // console.log(i);
             return <BurgerIngredient key={igkey + i} type={igkey}/>
-            
         });
     })
     // console.log(transfromedIngredients)
@@ -20,6 +19,16 @@ const burger =(props)=>{
     // 1: (2) [{…}, {…}]
     // 2: [{…}]
     // 3: [{…}]
+    .reduce((arr,el)=>{
+        return arr.concat(el)
+    },[]);
+    console.log(transfromedIngredients);
+
+    if(transfromedIngredients.length === 0){
+        transfromedIngredients= <p>Please start adding ingredients</p>
+    }
+
+    
 
     //-------------------------------------------------------
     return(
