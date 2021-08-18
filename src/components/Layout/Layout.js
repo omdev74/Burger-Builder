@@ -8,16 +8,25 @@ import Aux from "../../hoc/Auxiliary";
 class Layout extends Component{
 
     state={
-        showSideDrawer:true
+        showSideDrawer:false
     }
     sideDrawerClosedHandler=()=>{
         this.setState({showSideDrawer:false})
+    }
+    ShowDrawerToggleHandler=()=>{
+        //dont use because u will get old state
+        // this.setState({showSideDrawer:!this.state.showSideDrawer})
+        this.setState((prevState)=>{
+            return {showSideDrawer:!prevState.showSideDrawer};
+        })
+
     }
     render(){
         return(
         <Aux>
             <div className={classes.Bg}>
-            <Toolbar />
+            <Toolbar 
+            drawerToggleClicked={this.ShowDrawerToggleHandler}/>
             <SideDrawer 
             open={this.state.showSideDrawer}
             closed={this.sideDrawerClosedHandler}/>
