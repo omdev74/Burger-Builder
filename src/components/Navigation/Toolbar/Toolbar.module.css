@@ -17,3 +17,14 @@
 .Toolbar nav{
     height: 100%;
 }
+.Logo{
+    height: 100%;
+}
+
+/* mobile */
+@media (max-width:499px) {
+    .DesktopOnly{
+        display:none;
+    }
+    
+}
